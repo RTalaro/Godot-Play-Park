@@ -1,0 +1,34 @@
+[background arg="#000000ff" fade="0.0"]
+[wait time="1.0"]
+Eve: Dialogic takes [b]BBCode[/b]. Let's wait for 3 seconds
+[wait time="3.0" skippable="true"]
+Text, no speaker
+join Eve center
+Eve has joined at center
+join Eve left
+Eve moves left
+
+[background arg="#555555ff" fade="1.0"]
+- Interact
+	join eve left
+	foster: “Welcome to Dialogic!”
+	label basics
+	[clear time="0.0" portraits="false" music="false" background="false" positions="false" style="false"]
+	- Choices
+		eve: “These are choices.”
+		set {ch1.intro.foster.graduation} = true
+	- Labels
+		eve: “You can set labels to jump around the timeline.”
+		set {ch1.intro.foster.festival} = true
+	- Variables
+		eve: “You can set variables to handle conditionals.”
+		set {ch1.intro.foster.boy} = true
+	if {ch1.intro.foster.graduation} == true and {ch1.intro.foster.festival} == true and {ch1.intro.foster.boy} == true:
+		jump basics_done
+	else:
+		jump basics
+label basics_done
+leave eve [animation="Fade Out" length="0.25" wait="true"]
+[clear time="0.0" portraits="false" music="false" background="false" positions="false" style="false"]
+- Leave the room
+eve: “Do you need a pencil? I have a spare.”

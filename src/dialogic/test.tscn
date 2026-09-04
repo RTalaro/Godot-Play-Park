@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b5e7douca142l"]
+
+[ext_resource type="Script" uid="uid://dps0pd22m4s2p" path="res://dialogic/test.gd" id="1_pcfwn"]
+
+[node name="Test" type="Control" unique_id=2003175944]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pcfwn")
