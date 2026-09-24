@@ -11,28 +11,49 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s70cv")
 
-[node name="Button" type="Button" parent="." unique_id=810786306]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -79.0
-offset_top = 81.0
-offset_right = 79.0
-offset_bottom = 164.0
-grow_horizontal = 2
-text = "New Cat Fact"
-
-[node name="HTTPRequest" type="HTTPRequest" parent="Button" unique_id=1870909609]
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1870909609]
 
 [node name="Label" type="Label" parent="." unique_id=828128861]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -84.0
-offset_right = 84.0
-offset_bottom = 40.0
-grow_horizontal = 2
+layout_mode = 0
+offset_left = 538.0
+offset_top = 69.0
+offset_right = 614.0
+offset_bottom = 92.0
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=169310853]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -85.5
+offset_right = 20.0
+offset_bottom = 85.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="GetAllButton" type="Button" parent="Buttons" unique_id=810786306]
+layout_mode = 2
+text = "GET ALL"
+
+[node name="GetOneButton" type="Button" parent="Buttons" unique_id=513060187]
+layout_mode = 2
+text = "GET ONE"
+
+[node name="PostButton" type="Button" parent="Buttons" unique_id=419058655]
+layout_mode = 2
+text = "POST"
+
+[node name="PutButton" type="Button" parent="Buttons" unique_id=1083045448]
+layout_mode = 2
+text = "PUT"
+
+[node name="DeleteButton" type="Button" parent="Buttons" unique_id=52434227]
+layout_mode = 2
+text = "DELETE"
