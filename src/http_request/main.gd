@@ -12,7 +12,6 @@ const CONTENT_TYPE: String = "Content-Type:application/x-www-form-urlencoded"
 @onready var delete_button: Button = $Buttons/DeleteButton
 
 
-## It directly modifies the database? It's not stateless... this could be bad
 func _ready() -> void:
 	## If you want to make it cleaner, consider using an Array
 	## to store methods and params, and connect signals (ex. below)
