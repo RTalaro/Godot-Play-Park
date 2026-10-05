@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ymtvb7ae3cf8"]
+
+[ext_resource type="Script" uid="uid://crloldfwtwajw" path="res://multiplayer/main.gd" id="1_y0sn5"]
+[ext_resource type="Script" uid="uid://b0vkm0jcwe3yy" path="res://multiplayer/multiplayer_spawner.gd" id="2_qsya4"]
+[ext_resource type="PackedScene" uid="uid://b8xebbs13pk3h" path="res://multiplayer/network_player.tscn" id="3_ki5mu"]
+
+[node name="Main" type="Control" unique_id=1845828327]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y0sn5")
+
+[node name="UI" type="VBoxContainer" parent="." unique_id=647126588]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -33.0
+offset_right = 33.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="ServerButton" type="Button" parent="UI" unique_id=2024313944]
+layout_mode = 2
+text = "SERVER"
+
+[node name="ClientButton" type="Button" parent="UI" unique_id=466794094]
+layout_mode = 2
+text = "CLIENT"
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1581602476]
+_spawnable_scenes = PackedStringArray("uid://b8xebbs13pk3h")
+spawn_path = NodePath("..")
+script = ExtResource("2_qsya4")
+network_player = ExtResource("3_ki5mu")
